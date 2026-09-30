@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skráning viðskiptavina – Nes Endurskoðun</title>
+<meta name="description" content="Skráningareyðublað fyrir viðskiptavini Nes Endurskoðunar.">
+<!-- Falin síða: ekki tengd úr valmynd og ekki skráð hjá leitarvélum.
+     Athugið: síðan má EKKI vera í Disallow í robots.txt, annars sjá leitarvélar aldrei noindex. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f3a51">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#efni">Fara beint í efni</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="Nes Endurskoðun – forsíða">
+      <img src="assets/img/logo.png" width="1000" height="236" alt="Nes Endurskoðun">
+    </a>
+    <button class="burger" type="button" aria-label="Opna valmynd" aria-expanded="false" aria-controls="adalvalmynd"><span></span></button>
+    <nav aria-label="Aðalvalmynd">
+      <ul class="menu" id="adalvalmynd">
+        <li><a href="index.html#thjonustan">Þjónustan</a></li>
+        <li><a href="about.html">Um okkur</a></li>
+        <li><a href="contact.html">Hafa samband</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="efni">
+  <section id="skraning">
+    <div class="wrap">
+      <h1>Skráning viðskiptavina</h1>
+      <p class="lead">Vinsamlegast fylltu út eyðublaðið hér að neðan. Upplýsingarnar eru notaðar til að stofna þig sem viðskiptavin og veita þér rétta þjónustu.</p>
+      <p class="meta">Reitir merktir með stjörnu eru nauðsynlegir. Farið er með allar upplýsingar sem trúnaðarmál. Ef eyðublaðið birtist ekki, sendu okkur póst á <a href="mailto:bokhald@nesendurskodun.is">bokhald@nesendurskodun.is</a>.</p>
+
+      <!--
+        ================= UPPSETNING: MICROSOFT FORMS =================
+        1) Farðu á https://forms.office.com og búðu til nýtt eyðublað (með vinnu-/skólareikningi
+           svo svörin lendi í OneDrive for Business / SharePoint).
+        2) Búðu til spurningarnar, t.d.:
+             • Nafn ..................................... Text (Required)
+             • Kennitala ................................ Text (Required)  ← sjá athugasemd neðar
+             • Netfang .................................. Text (Required, Restrictions ▸ Email)
+             • Símanúmer ................................ Text (Required)
+             • Heimilisfang ............................. Text
+             • Nafn fyrirtækis .......................... Text
+             • Kennitala fyrirtækis ..................... Text
+             • Tegund rekstrar .......................... Choice (Einstaklingur / Verktaki / Einkahlutafélag / Annað)
+             • Hvaða þjónustu óskar þú eftir? ........... Choice, Multiple answers
+                 (Bókhald / Launavinnsla / Ársreikningur / Skattframtal / Annað)
+             • Athugasemdir ............................. Text (Long answer)
+           KENNITALA: veldu spurningategundina "Text" ▸ ... ▸ Restrictions ▸ er ekki hægt að
+           nota fyrir kennitölu, svo settu frekar lýsingu "10 tölustafir, t.d. 1234567890"
+           og merktu spurninguna sem Required.
+        3) Svör í OneDrive: opnaðu eyðublaðið ▸ Responses ▸ "Open in Excel".
+           Þá verður til Excel-skjal í OneDrive (Microsoft Forms möppunni) sem uppfærist
+           sjálfkrafa við hvert nýtt svar.
+        4) Innfelling: Collect responses ▸ Embed ▸ afritaðu slóðina úr src="..."
+           og límdu hana inn í src-eigindina á <iframe> hér að neðan.
+        ===============================================================
+      -->
+      <div class="form-embed">
+        <iframe
+          title="Skráningareyðublað – Microsoft Forms"
+          src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__ZYmsC5UN0NOOVhOSjFMVE9RSDdRQUtIUUxCMlFCQi4u"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="hafa-samband">
+  <div class="wrap">
+    <a href="index.html" aria-label="Nes Endurskoðun – forsíða">
+      <img src="assets/img/logo.png" width="1000" height="236" alt="Nes Endurskoðun" loading="lazy">
+    </a>
+    <address>
+      <a href="mailto:bokhald@nesendurskodun.is">bokhald@nesendurskodun.is</a><br>
+      Brú, 861 Hvolsvöllur
+    </address>
+  </div>
+  <p class="copy">© <span data-year>2026</span> Nes Endurskoðun</p>
+</footer>
+
+</body>
+</html>
