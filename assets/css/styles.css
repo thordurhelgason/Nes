@@ -19,7 +19,7 @@
   --body:'PT Serif',Georgia,'Times New Roman',serif;
 
   --wrap:1140px;
-  --radius:15px;
+  --radius:18px;
 }
 
 /* --------------------------------------------------------------------------
@@ -82,9 +82,9 @@ h3{font-size:1.625rem;line-height:1.25;color:var(--accent);margin-bottom:.6rem}
   font-family:var(--body);font-size:1rem;text-decoration:none;cursor:pointer;
   border:0;padding:1rem 1.3rem;min-width:9rem;text-align:center;
   border-radius:var(--radius);background:var(--accent);color:#fff;
-  transition:opacity .2s;
+  transition:transform .2s,opacity .2s;
 }
-.btn:hover{opacity:.85}
+.btn:hover{transform:translateY(-2px);opacity:.85}
 
 /* --------------------------------------------------------------------------
    Header / navigation
@@ -123,16 +123,18 @@ section{padding:6rem 0}
              url("../img/hero.jpg") center/cover no-repeat;
 }
 .hero .wrap{padding-top:3rem;padding-bottom:5.5rem;width:100%}
-.hero h1{color:#fff;font-size:clamp(2.1rem,6vw,4.6rem);line-height:1.1;max-width:14ch;margin-bottom:0}
+.hero h1{color:#fff;font-size:clamp(2.1rem,6vw,4.6rem);line-height:1.06;max-width:13ch;margin-bottom:0;text-wrap:balance}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-actions .btn{margin-top:0}
 
 /* --------------------------------------------------------------------------
    Home – services
    -------------------------------------------------------------------------- */
 #thjonustan{background:var(--light)}
-.services{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
-.service{padding:2.25rem 1.75rem;border-bottom:1px solid var(--line);text-align:center}
-.service+.service{border-left:1px solid var(--line)}
-.service h3{font-size:1.85rem;color:var(--accent);margin-bottom:.9rem}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.service{padding:2rem 1.5rem;border-radius:var(--radius);text-align:center;transition:transform .22s}
+.service:hover{transform:translateY(-5px)}
+.service h3{font-size:1.65rem;color:var(--accent);margin-bottom:.9rem}
 
 /* --------------------------------------------------------------------------
    Home – about band
@@ -146,7 +148,8 @@ section{padding:6rem 0}
 /* --------------------------------------------------------------------------
    About page – team
    -------------------------------------------------------------------------- */
-.team{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 4rem;margin-top:3.5rem;border-top:1px solid var(--line);padding-top:3rem}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3.5rem;border:0;padding-top:0}
+.person{padding:2rem;border-radius:var(--radius)}
 .person p{margin:0}
 .person .role{font-weight:700}
 .person a{text-decoration:none;border-bottom:1px solid var(--line)}
@@ -163,16 +166,21 @@ section{padding:6rem 0}
 .contact-intro a{border-bottom:1px solid var(--line);text-decoration:none;word-break:break-word}
 .contact-intro a:hover{border-color:var(--ink)}
 
-form{display:grid;gap:1.5rem}
+form{display:grid;gap:1.5rem;padding:2rem;border-radius:var(--radius)}
 .field{display:grid;gap:.5rem}
 label{font-family:var(--display);letter-spacing:.06em;font-size:.9rem}
 .req{color:var(--accent);font-family:var(--body);letter-spacing:0;font-size:.85rem}
-input,textarea{font-family:var(--body);font-size:1rem;color:var(--ink);background:var(--light);border:0;border-bottom:1px solid var(--line);padding:.85rem 1rem;width:100%;transition:border-color .2s}
+input,textarea{font-family:var(--body);font-size:1rem;color:var(--ink);background:var(--light);border:0;border-bottom:1px solid var(--line);border-radius:10px;padding:.85rem 1rem;width:100%;transition:border-color .2s}
 textarea{min-height:10rem;resize:vertical}
 input:focus,textarea:focus{outline:none;border-bottom-color:var(--accent)}
 form .btn{margin-top:0;justify-self:start}
 .form-note{font-size:.95rem}
 .form-note[hidden]{display:none}
+
+/* Slide the About and Contact pages in/out when navigating between them. */
+.page-transition-enabled main{transition:opacity .28s ease,transform .28s ease}
+.page-transition-enabled:not(.page-ready) main{opacity:0;transform:translateX(24px)}
+.page-transition-enabled.page-leaving main{opacity:0;transform:translateX(-24px)}
 
 /* --------------------------------------------------------------------------
    Registration page – Microsoft Forms embed
@@ -203,9 +211,9 @@ form .btn{margin-top:0;justify-self:start}
 @media (max-width:900px){
   section{padding:5rem 0}
   .services{grid-template-columns:1fr 1fr}
-  .service:nth-child(odd){border-left:0}
   .about .grid{grid-template-columns:1fr;gap:1rem}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .team{grid-template-columns:repeat(2,1fr)}
   .team{gap:2.5rem}
 }
 
@@ -227,11 +235,15 @@ form .btn{margin-top:0;justify-self:start}
 
   .hero{min-height:calc(70vh - var(--header-height));min-height:calc(70svh - var(--header-height));background-position:60% center}
   .hero .wrap{padding-bottom:3rem}
+  .hero-actions{gap:.65rem}
+  .hero-actions .btn{width:auto}
 
   section{padding:3.75rem 0}
   .services{grid-template-columns:1fr}
-  .service,.service+.service{padding:1.75rem 0;border-left:0}
-  .team{grid-template-columns:1fr;gap:2rem;margin-top:2.5rem;padding-top:2rem}
+  .service{padding:1.75rem}
+  .team{grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
+  .person{padding:1.5rem}
+  form{padding:1.25rem}
   .btn{display:block;width:100%;margin-top:2rem}
   form .btn{width:100%;justify-self:stretch}
   .form-embed{border-radius:12px}

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=2" defer></script>
 </head>
 <body>
 
@@ -55,18 +55,19 @@
           <p>Brú, 861 Hvolsvöllur</p>
         </div>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formspree.io/f/xoevboyj" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Fyrirspurn frá vefsíðu Nes Endurskoðunar">
           <div class="field">
             <label for="nafn">Nafn <span class="req">(nauðsynlegt)</span></label>
-            <input type="text" id="nafn" name="nafn" autocomplete="name" required>
+            <input type="text" id="nafn" name="name" autocomplete="name" required>
           </div>
           <div class="field">
             <label for="postfang">Póstfang <span class="req">(nauðsynlegt)</span></label>
-            <input type="email" id="postfang" name="postfang" autocomplete="email" required>
+            <input type="email" id="postfang" name="email" autocomplete="email" required>
           </div>
           <div class="field">
             <label for="skilabod">Skilaboð <span class="req">(nauðsynlegt)</span></label>
-            <textarea id="skilabod" name="skilabod" required></textarea>
+            <textarea id="skilabod" name="message" required></textarea>
           </div>
           <button class="btn" type="submit">Senda</button>
           <p class="form-note" id="form-note" role="status" hidden></p>
