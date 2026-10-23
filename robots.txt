@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Athugið: /skraning.html er falin síða. Hún er EKKI sett í Disallow hér,
-# því þá myndu leitarvélar aldrei sjá <meta name="robots" content="noindex">
-# sem heldur henni utan við leitarniðurstöður.
+# Athugið: Disallow hindrar skrið á síðunum en kemur ekki endilega í veg fyrir
+# að slóðirnar birtist í leitarniðurstöðum. noindex-merkið er áfram í HTML.
+Disallow: /areidanleikakonnun.html
 
-Sitemap: https://www.nesendurskodun.is/sitemap.xml
+Sitemap: https://nesendurskodun.is/sitemap.xml

@@ -222,7 +222,7 @@ form .btn{margin-top:0;justify-self:start}
    -------------------------------------------------------------------------- */
 @media (max-width:700px){
   html{--header-height:76px}
-  .wrap{padding:0 1.25rem}
+  .wrap{padding:0 1rem}
   .nav{min-height:76px}
   .logo img{height:46px}
   .burger{display:block}
