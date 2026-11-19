@@ -136,6 +136,12 @@ section{padding:6rem 0}
 .service:hover{transform:translateY(-5px)}
 .service h3{font-size:1.65rem;color:var(--accent);margin-bottom:.9rem}
 
+.services-intro{font-size:1.2rem;line-height:1.7;max-width:62ch;margin-bottom:3rem}
+.service-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.service-card{background:#fff;padding:2.5rem 2.25rem;border-radius:var(--radius);border-top:4px solid var(--accent);box-shadow:0 12px 30px -18px rgba(15,58,81,.35);transition:transform .22s}
+.service-card:hover{transform:translateY(-4px)}
+.service-card h3{font-size:1.75rem;margin-bottom:1rem}
+
 /* --------------------------------------------------------------------------
    Home – about band
    -------------------------------------------------------------------------- */
@@ -281,6 +287,9 @@ form .btn{margin-top:0;justify-self:start}
   section{padding:3.75rem 0}
   .services{grid-template-columns:1fr}
   .service{padding:1.75rem}
+  .services-intro{font-size:1.1rem;margin-bottom:2rem}
+  .service-cards{grid-template-columns:1fr;gap:1rem}
+  .service-card{padding:1.75rem 1.5rem}
   .team{grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
   .person{padding:1.5rem}
   .dates li{grid-template-columns:1fr;gap:.25rem;padding:1rem 1.25rem}
