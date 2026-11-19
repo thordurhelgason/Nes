@@ -38,7 +38,8 @@
       <ul class="menu" id="adalvalmynd">
         <li><a href="index.html#thjonustan">Þjónustan</a></li>
         <li><a href="about.html" aria-current="page">Um okkur</a></li>
-        <li><a href="contact.html">Hafa samband</a></li>
+        <li><a href="hagnytur-frodleikur.html">Hagnýtur fróðleikur</a></li>
+        <li><a href="index.html#hafa-samband">Hafa samband</a></li>
       </ul>
     </nav>
   </div>
@@ -50,26 +51,47 @@
       <h1>Um okkur</h1>
       <p class="lead">Hjá Nes Endurskoðun starfar reynslumikið teymi löggiltra endurskoðenda og ráðgjafa sem veitir fyrirtækjum, verktökum og einstaklingum persónulega þjónustu í bókhaldi, endurskoðun og fjármálaráðgjöf.</p>
 
+      <!--
+        MYNDIR: Settu myndirnar í assets/img/team/ og skiptu <span>-inu í .person-photo
+        út fyrir <img>, t.d.:
+          <img src="assets/img/team/hjalti-astbjartsson.jpg" alt="Hjalti Ástbjartsson" width="400" height="400" loading="lazy">
+        Ferningslaga myndir (t.d. 400×400 px) koma best út.
+
+        LINKEDIN: Skiptu href="#" út fyrir slóðina á prófílinn. Hlekkurinn er falinn
+        þar til raunveruleg slóð hefur verið sett inn.
+      -->
       <div class="team">
         <article class="person">
+          <div class="person-photo"><span aria-hidden="true" >HÁ</span></div>
           <h3>Hjalti Ástbjartsson</h3>
           <p class="role">Löggiltur endurskoðandi</p>
           <p><strong>Heimilisfang:</strong> Laugavegi 59</p>
           <p><strong>Sími:</strong> <a href="tel:+3546664004">666-4004</a></p>
+
         </article>
 
         <article class="person">
+          <div class="person-photo"><img src="assets/img/HM.jpg" alt="Hjalti Már Hjaltason" width="316" height="316" loading="lazy"></div>
           <h3>Hjalti Már Hjaltason</h3>
           <p class="role">Löggiltur endurskoðandi</p>
           <p><strong>Heimilisfang:</strong> Bugðulæk 9</p>
           <p><strong>Sími:</strong> <a href="tel:+3546594008">659-4008</a></p>
+          <a class="linkedin" href="https://www.linkedin.com/in/hjalti-m%C3%A1r-hjaltason-70b9b034b/" target="_blank" rel="noopener noreferrer" aria-label="Hjalti Már Hjaltason á LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
         </article>
 
         <article class="person">
+          <div class="person-photo"><img src="assets/img/BH.jpg" alt="Bjartur Heiðarsson" width="316" height="316" loading="lazy"></div>
           <h3>Bjartur Heiðarsson</h3>
           <p class="role">Viðskiptafræðingur og löggiltur verðbréfamiðlari</p>
           <p><strong>Heimilisfang:</strong> Langholtsvegur 206</p>
           <p><strong>Sími:</strong> <a href="tel:+3548482426">848-2426</a></p>
+          <a class="linkedin" href="https://www.linkedin.com/in/bjartur-hei%C3%B0arsson-284a47296/" target="_blank" rel="noopener noreferrer" aria-label="Bjartur Heiðarsson á LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
         </article>
       </div>
     </div>
@@ -82,14 +104,16 @@
   </section>
 </main>
 
-<footer class="site-footer" id="hafa-samband">
+<footer class="site-footer">
   <div class="wrap">
     <a href="index.html" aria-label="Nes Endurskoðun – forsíða">
       <img src="assets/img/logo.png" width="1000" height="236" alt="Nes Endurskoðun" loading="lazy">
     </a>
     <address>
       <a href="mailto:bokhald@nesendurskodun.is">bokhald@nesendurskodun.is</a><br>
-      Brú, 861 Hvolsvöllur
+      Brú, 861 Hvolsvöllur<br>
+      Skútuvogur 1H, 104 Reykjavík<br>
+      Múlinn, 740 Neskaupstaður
     </address>
   </div>
   <p class="copy">© <span data-year>2026</span> Nes Endurskoðun</p>
