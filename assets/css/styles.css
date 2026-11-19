@@ -154,12 +154,19 @@ section{padding:6rem 0}
 .person .role{font-weight:700}
 .person a{text-decoration:none;border-bottom:1px solid var(--line)}
 .person a:hover{border-color:var(--ink)}
+.person-photo{width:140px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--light);border:1px solid var(--line);display:grid;place-items:center;margin-bottom:1.25rem}
+.person-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.person-photo span{font-family:var(--display);font-size:2.4rem;color:var(--accent);letter-spacing:.04em}
+.person .linkedin{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;border:0;color:var(--accent)}
+.person .linkedin:hover{opacity:.75}
+/* Hidden until a real LinkedIn URL replaces href="#" */
+.person .linkedin[href="#"]{display:none}
 
 .cta{background:var(--light);text-align:center}
 .cta .btn{margin-top:0}
 
 /* --------------------------------------------------------------------------
-   Contact page
+   Home – contact section
    -------------------------------------------------------------------------- */
 .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}
 .contact-intro p+p{margin-top:1.25rem}
@@ -177,10 +184,26 @@ form .btn{margin-top:0;justify-self:start}
 .form-note{font-size:.95rem}
 .form-note[hidden]{display:none}
 
-/* Slide the About and Contact pages in/out when navigating between them. */
+/* Slide the About and Info pages in/out when navigating between them. */
 .page-transition-enabled main{transition:opacity .28s ease,transform .28s ease}
 .page-transition-enabled:not(.page-ready) main{opacity:0;transform:translateX(24px)}
 .page-transition-enabled.page-leaving main{opacity:0;transform:translateX(-24px)}
+
+/* --------------------------------------------------------------------------
+   Info page – Hagnýtur fróðleikur
+   -------------------------------------------------------------------------- */
+.info-block{margin-top:3.5rem}
+.info-block h2{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--accent);margin-bottom:1rem}
+.info-block > p{max-width:60ch;margin-bottom:1rem}
+.info-block .meta{margin-top:1.25rem}
+.info-block .meta a{border-bottom:1px solid var(--line);text-decoration:none}
+.info-block .meta a:hover{border-color:var(--ink)}
+.dates{list-style:none;display:grid;gap:.75rem}
+.dates li{display:grid;grid-template-columns:14rem 1fr;gap:1.5rem;padding:1.1rem 1.5rem;background:var(--light);border-radius:var(--radius)}
+.dates .when{font-family:var(--display);color:var(--accent);letter-spacing:.02em}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.fact{padding:1.75rem;border:1px solid var(--line);border-radius:var(--radius)}
+.fact h3{font-size:1.35rem}
 
 /* --------------------------------------------------------------------------
    Registration page – Microsoft Forms embed
@@ -243,6 +266,9 @@ form .btn{margin-top:0;justify-self:start}
   .service{padding:1.75rem}
   .team{grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
   .person{padding:1.5rem}
+  .dates li{grid-template-columns:1fr;gap:.25rem;padding:1rem 1.25rem}
+  .facts{grid-template-columns:1fr}
+  .fact{padding:1.5rem}
   form{padding:1.25rem}
   .btn{display:block;width:100%;margin-top:2rem}
   form .btn{width:100%;justify-self:stretch}
