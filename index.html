@@ -59,7 +59,8 @@
       <ul class="menu" id="adalvalmynd">
         <li><a href="#thjonustan">Þjónustan</a></li>
         <li><a href="about.html">Um okkur</a></li>
-        <li><a href="contact.html">Hafa samband</a></li>
+        <li><a href="hagnytur-frodleikur.html">Hagnýtur fróðleikur</a></li>
+        <li><a href="#hafa-samband">Hafa samband</a></li>
       </ul>
     </nav>
   </div>
@@ -92,8 +93,35 @@
           <h3>Fyrirtæki og einstaklingar</h3>
           <p>Við þjónustum fyrirtæki, verktaka og einstaklinga í eigin rekstri og sníðum þjónustuna að þörfum hvers og eins.</p>
         </article>
+  </section>
+
+  <section id="hafa-samband" aria-labelledby="hafa-samband-titill">
+    <div class="wrap">
+      <h2 id="hafa-samband-titill">Hafðu samband</h2>
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <p>Ef þú hefur áhuga á að fá frekari upplýsingar um þjónustu okkar, vinsamlegast fylltu út formið eða sendu okkur tölvupóst á netfangið hér að neðan, og við verðum í sambandi.</p>
+          <p><a href="mailto:bokhald@nesendurskodun.is">bokhald@nesendurskodun.is</a></p>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/xoevboyj" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Fyrirspurn frá vefsíðu Nes Endurskoðunar">
+          <div class="field">
+            <label for="nafn">Nafn <span class="req">(nauðsynlegt)</span></label>
+            <input type="text" id="nafn" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="postfang">Póstfang <span class="req">(nauðsynlegt)</span></label>
+            <input type="email" id="postfang" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="skilabod">Skilaboð <span class="req">(nauðsynlegt)</span></label>
+            <textarea id="skilabod" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Senda</button>
+          <p class="form-note" id="form-note" role="status" hidden></p>
+        </form>
       </div>
-      <a class="btn" href="contact.html">Hafðu samband</a>
     </div>
   </section>
 
@@ -112,15 +140,16 @@
   </section>
 </main>
 
-<footer class="site-footer" id="hafa-samband">
+<footer class="site-footer">
   <div class="wrap">
     <a href="index.html" aria-label="Nes Endurskoðun – forsíða">
       <img src="assets/img/logo.png" width="1000" height="236" alt="Nes Endurskoðun" loading="lazy">
     </a>
     <address>
       <a href="mailto:bokhald@nesendurskodun.is">bokhald@nesendurskodun.is</a><br>
-      Brú, 861 Hvolsvöllur <br>
-      Skútuvogur 1H, 104 Reykjavík
+      Brú, 861 Hvolsvöllur<br>
+      Skútuvogur 1H, 104 Reykjavík<br>
+      Múlinn, 740 Neskaupstaður
     </address>
   </div>
   <p class="copy">© <span data-year>2026</span> Nes Endurskoðun</p>
