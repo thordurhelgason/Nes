@@ -6,7 +6,7 @@
   'use strict';
 
   /* ----------------------------------------------------------------------
-     Slide transitions for the About and Contact pages
+     Slide transitions for the About and Info pages
      ---------------------------------------------------------------------- */
   var prefersReducedMotion = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -26,7 +26,7 @@
 
       var destination = new URL(link.href, window.location.href);
       if (destination.origin !== window.location.origin ||
-          !/\/(?:about|contact)\.html$/i.test(destination.pathname) ||
+          !/\/(?:about|hagnytur-frodleikur)\.html$/i.test(destination.pathname) ||
           destination.pathname === window.location.pathname) return;
 
       e.preventDefault();
